@@ -1,0 +1,18 @@
+.sidebarRow {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    h4 {
+        margin-left: 20px;
+        font-weight: 700;
+    }
+    .icon {
+        font-size: xx-large;
+        color: #2e81f4;
+    }
+    &:hover  {
+        background-color: #d3d3d3;
+        border-radius: 10px;
+    }
+}
