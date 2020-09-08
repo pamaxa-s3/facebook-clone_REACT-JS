@@ -60,4 +60,4 @@ function MessageSender() {
     )
 }
 
-export default MessageSender
+export default MessageSender;
