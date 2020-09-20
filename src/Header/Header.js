@@ -11,9 +11,13 @@ import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useStateValue } from '../StateProvider';
 
 
 function Header() {
+
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className={style.header}>
 
@@ -47,8 +51,8 @@ function Header() {
 
             <div className={style.right}>
                 <div className={style.info}>
-                    <Avatar />
-                    <h4>Roman Strynzha</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                 </div>
                 <IconButton>
                     <AddIcon />

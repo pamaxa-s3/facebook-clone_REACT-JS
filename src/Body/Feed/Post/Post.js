@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './Post.module.scss';
 import { Avatar } from '@material-ui/core';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
@@ -7,9 +7,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import NearMeIcon from '@material-ui/icons/NearMe';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 
-function Post({ profilePic, image, username, timestemp, message }) {
-
-
+function Post({ profilePic, image, username, timestamp, message }) {
 
     return (
         <div className={style.post}>
@@ -19,8 +17,8 @@ function Post({ profilePic, image, username, timestemp, message }) {
                     src={profilePic} />
                 <div className={style.top__info}>
                     <h3>{username}</h3>
-                    <p>Timestamp...
-                        {/* {new Date(timestemp?.toDate()).toUTCString()} */}
+                    <p>
+                        {new Date(timestamp?.toDate()).toUTCString()}
                     </p>
                 </div>
             </div>
